@@ -81,8 +81,8 @@ button{
     margin: 10px;
     font-weight: 600;
     text-align: center;
-    background: #047ac9;  
-    color: #FFFFFF;
+    background: #FFFFFF;  
+    color: #047ac9;
     cursor: pointer;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
