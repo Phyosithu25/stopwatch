@@ -25,17 +25,14 @@ const startTime = () =>{
         min = 0;
         hur ++;
     }
-    display();
-    
+    display()};
 
-}
-
-
-
+let click = 0;
 
 let intervalId;
 startBtn.addEventListener("click",()=> {
-    if (sec == 0 & min == 0 & hur == 0 & mili == 0){
+    if (click === 0){
+    click += 1;
     clearInterval(intervalId);
     intervalId = setInterval(startTime, 10);
     btnOn();
@@ -75,19 +72,19 @@ continueBtn.addEventListener("click",()=> {
     btnOn();
 });
 resetBtn.addEventListener("click", ()=> {
-    if (sec == 0 & min == 0 & hur == 0 & mili == 0) {
+    if (click === 0) {
         return;
     }
-     btnOff();
+    click = 0;
+    btnOff();
     sec = 0;
     min = 0;
     hur = 0;
     mili = 0;
     display();
     clearInterval(intervalId);
-    btnOn();
-    setTimeout(()=> {resetBtn.style.background = "#FFFFFF";
-    resetBtn.style.color = "#047ac9"},1000)
+    
+   
     return;
 });
 
