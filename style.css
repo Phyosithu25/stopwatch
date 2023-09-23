@@ -36,6 +36,8 @@ span {
 .display{
     font-family: 'digital';
     width: 450px;
+    height: 90px;
+    line-height: 90px;
     background: #047ac9; 
     border-radius: 5px;
     user-select: none;
@@ -89,4 +91,17 @@ button{
 .reset{
     background-color: red;
     color: #FFFFFF;
+}
+.off{
+    display: none;
+    background-color: red;
+    color: #FFFFFF;
+}
+.on{
+    display: block;
+    background-color: rgb(10, 226, 10);
+    color: #FFFFFF;
+}
+.digishow{
+    display: none;
 }

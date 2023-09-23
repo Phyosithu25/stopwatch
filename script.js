@@ -7,7 +7,9 @@ const seconds = document.querySelector(".seconds");
 const minutes = document.querySelector(".minutes");
 const hours = document.querySelector(".hours");
 const count = document.querySelector(".count");
-
+const onBtn = document.querySelector(".on");
+const offBtn = document.querySelector(".off");
+const showDisplay = document.querySelector(".digishow");
 
 
 let sec = 0 ,min = 0, hur = 0 ,mili = 0;
@@ -56,8 +58,9 @@ pauseBtn.addEventListener("click",() => {
         return;
     };
     btnOff();
-    clearInterval(intervalId);
+    
     btnOn();
+    clearInterval(intervalId);
 
 
     
@@ -67,9 +70,9 @@ continueBtn.addEventListener("click",()=> {
        return;
    }
     btnOff();
+    btnOn();
     clearInterval(intervalId);
     intervalId = setInterval(startTime, 10);
-    btnOn();
 });
 resetBtn.addEventListener("click", ()=> {
     if (click === 0) {
@@ -115,3 +118,14 @@ const btnOn = () =>{
     clickbtn.classList.add("isopen");
 
 }
+onBtn.addEventListener("click",()=> {
+    offBtn.style.display = "block";
+    onBtn.style.display = "none";
+    showDisplay.style.display = "block";
+})
+offBtn.addEventListener("click", ()=> {
+    offBtn.style.display = "none";
+    onBtn.style.display = "block";
+    showDisplay.style.display = "none";
+
+})
