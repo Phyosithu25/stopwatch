@@ -118,10 +118,15 @@ const btnOn = () =>{
     clickbtn.classList.add("isopen");
 
 }
-onBtn.addEventListener("click",()=> {
+onBtn.addEventListener("click",()=> { 
     offBtn.style.display = "block";
     onBtn.style.display = "none";
+    setTimeout(()=>{
+    
     showDisplay.style.display = "block";
+
+    }, 3000)
+    
 })
 offBtn.addEventListener("click", ()=> {
     offBtn.style.display = "none";
