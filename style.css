@@ -42,6 +42,7 @@ span {
     border-radius: 5px;
     user-select: none;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    position: relative;
     
     
 }
@@ -51,7 +52,7 @@ ul{
     
 }
 li{
-    list-style: none;
+    list-style: ;
     display: inline-block;
     color:#FFFFFF;
     font-size: 100px;
@@ -103,5 +104,27 @@ button{
     color: #FFFFFF;
 }
 .digishow{
+    display: none ;
+}
+.wellcome{
+    font-family: digital;
+    font-size: 70px;
+    color: #FFFFFF;
     display: none;
+    position: absolute;
+    animation: linear infinite alternate;
+    animation-name: run;
+    animation-duration: 3s;
+  }
+  
+  @-webkit-keyframes run {
+      0% {
+        left: 0;
+        transform: translateX(0);
+      }
+      100% {
+        left: 100%;
+        transform: translateX(-100%);
+        
+      }
 }

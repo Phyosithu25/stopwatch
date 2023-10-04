@@ -10,6 +10,7 @@ const count = document.querySelector(".count");
 const onBtn = document.querySelector(".on");
 const offBtn = document.querySelector(".off");
 const showDisplay = document.querySelector(".digishow");
+const wellcomeText =document.querySelector(".wellcome");
 
 
 let sec = 0 ,min = 0, hur = 0 ,mili = 0;
@@ -121,13 +122,17 @@ const btnOn = () =>{
 onBtn.addEventListener("click",()=> { 
     offBtn.style.display = "block";
     onBtn.style.display = "none";
+    wellcomeText.style.display = "block";
+    
     setTimeout(()=>{
-    
-    showDisplay.style.display = "block";
+        wellcomeText.style.display = "none";
+        showDisplay.style.display ="block";
+        
 
-    }, 3000)
+    },3000)
     
-})
+
+});
 offBtn.addEventListener("click", ()=> {
     offBtn.style.display = "none";
     onBtn.style.display = "block";
